@@ -58,25 +58,7 @@
                         <li>
                           <a href="{% url 'index' %}">Home</a>
                         </li>
-                        <li class="has-children active">
-                          <a href="{% url 'rooms' %}">Rooms</a>
-                          <ul class="dropdown arrow-top">
-                            <li><a href="{% url 'rooms' %}">Standard Room</a></li>
-                            <li><a href="{% url 'rooms' %}">Family Room</a></li>
-                            <li><a href="{% url 'rooms' %}">Single Room</a></li>
-                            <li class="has-children">
-                              <a href="{% url 'rooms' %}">Rooms</a>
-                              <ul class="dropdown">
-                                <li><a href="{% url 'rooms' %}">America</a></li>
-                                <li><a href="{% url 'rooms' %}">Europe</a></li>
-                                <li><a href="{% url 'rooms' %}">Asia</a></li>
-                                <li><a href="{% url 'rooms' %}">Africa</a></li>
-                                
-                              </ul>
-                            </li>
-  
-                          </ul>
-                        </li>
+                        <li><a href="{% url 'rooms' %}">Rooms</a></li>
                         <li><a href="{% url 'events' %}">Events</a></li>
                         <li><a href="{% url 'about' %}">About</a></li>
                         <li><a href="{% url 'contact' %}">Contact</a></li>
