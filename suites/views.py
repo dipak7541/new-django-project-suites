@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from .models import PeopleSay
 
 def index(request):
-    return render(request, 'index.html')
+    people1= PeopleSay.objects.all()
+    return render(request, 'index.html', {'people': people1})
 
 def about(request):
     return render(request, 'about.html')
