@@ -320,12 +320,13 @@
       <div class="container">
         <div class="rows">
           <div class="col-xl-12">
+            {% for people1 in people %}
             <div class="col-sm-3">
-              <img src="{{people.img}}">
-              <h2>{{people.name}}</h2>
-              <p>{{people.comment}}</p>
+              <img src="{{people1.img}}">
+              <h2>{{people1.name}}</h2>
+              <p>{{people1.comment}}</p>
             </div>
-            
+          {% endfor %}
           </div>
 
         </div>
