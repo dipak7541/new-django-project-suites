@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'suite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Peoplesay',
-        'HOST' :'localhost',
-        'USER' :'postgres',
-        'PASSWORD' :'dipak7541',
+        'NAME':'MankaBichar',
+        'HOST':'localhost',
+        'USER':'postgres',
+        'PASSWORD':'dipak7541',
     }
 }
 

@@ -1,9 +1,9 @@
-from django.shortcuts import render
-from .models import PeopleSay
+from django.shortcuts import render, redirect
+from .models import ManxekoBichar
 
 def index(request):
-    people1= PeopleSay.objects.all()
-    return render(request, 'index.html', {'people': people1})
+   
+    return render(request, 'index.html')
 
 def about(request):
     return render(request, 'about.html')
@@ -17,3 +17,13 @@ def rooms(request):
 def contact(request):
     return render(request, 'contact.html')
 # Create your views here.
+
+def getform(request):
+    name = request.POST['name']
+    comments=request.POST['comments']
+    date=request.POST['datepicker']
+
+    form1= ManxekoBichar(name=name,comments=comments,date=date)
+    form1.save()
+    print("sucess")
+    return redirect('/suite')

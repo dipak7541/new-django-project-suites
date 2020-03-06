@@ -1,10 +1,12 @@
 from django.db import models
 
 
-class PeopleSay(models.Model):
-    img = models.ImageField()
+
+class ManxekoBichar(models.Model):
     name = models.CharField(max_length=20)
-    comments = models.TextField()
+    comments= models.CharField(max_length=200)
+    date= models.DateField()
+
 
 
 # Create your models here.
