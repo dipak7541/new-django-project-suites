@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
-from .models import ManxekoBichar
+from .models import ManxekoBichar, ContactDetails
 
 def index(request):
-   
-    return render(request, 'index.html')
+    peoples =ManxekoBichar.objects.all()
+    return render(request, 'index.html',{'peoples':peoples})
 
 def about(request):
     return render(request, 'about.html')
@@ -27,3 +27,15 @@ def getform(request):
     form1.save()
     print("sucess")
     return redirect('/suite')
+
+def contactform(request):
+    fullname = request.POST.get('fullname')
+    email = request.POST.get('email')
+    phone = request.POST.get('phone')
+    message = request.POST.get('message')
+    #date = request.POST.get('date')
+
+    form2 = ContactDetails(name=fullname,email=email,phoneno=phone,message=message)
+    form2.save()
+    print('sucess')
+    return redirect('/suite/contact')
